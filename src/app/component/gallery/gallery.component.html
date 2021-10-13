@@ -1,0 +1,16 @@
+<div class="container1" *ngIf="Items">
+    <div
+      class="row justify-content-around align-items-center">
+      <div
+        class="col-lg-2 col-md-6 col-sm-12 border m-3"
+        style="height:40vh"
+        *ngFor="let item of Items"
+      >
+        <img alt="" [lazyLoad]="item.urls.regular" class="lazy-loading" />
+        <span class="left"><img alt="" [lazyLoad]="item.user.profile_image.small" class="lazy-loading-img-profile"/>
+        {{item.user.first_name}}</span> 
+        <span class="right"><fa-icon [icon]="faHeart"></fa-icon>&nbsp; {{item.likes}}
+          <fa-icon [icon]="faEye"></fa-icon>&nbsp;&nbsp;{{item.height}}</span>
+      </div>
+    </div>
+  </div>

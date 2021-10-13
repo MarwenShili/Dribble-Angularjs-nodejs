@@ -1,0 +1,27 @@
+.lazy-loading{
+    width: 150%;
+    height: 80%;
+    border-radius: 10%;
+}
+img:hover{
+    transform: scale(1.05);
+
+}
+.row{
+    width: 100%;
+    border-color: none;
+
+}
+.lazy-loading-img-profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.left{
+    margin-top: 25px;
+    float:left;
+}
+.right{
+    margin-top: 30px;
+    float: right;
+}

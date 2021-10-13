@@ -1,24 +1,69 @@
-
-
-<nav class="navbar">
- <div class="max-width">
-    <div class="logo"><a href="#">Marwen<span>Sh.</span></a>
+<nav class="navbar navbar-expand-lg  ">
+    <div class="container-fluid">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">Popular</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Popular</a></li>
+                  <li><a class="dropdown-item" href="#">New  Networthy</a></li>
+                  <li><a class="dropdown-item" href="#">Goods for Sale</a></li>
+                </ul>
+              </div>
+             
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link"  href="#">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#">Animation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#">Branding</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Illustration</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link ">Mobile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ">Print</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ">Product&nbsp;Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ">Topographie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ">Web&nbsp;Design</a>
+            </li>
+            
+          </ul>
+      </div>
+      <!--filter-->
+      <div class="container">
+        <button type="button" class="btn" data-toggle="collapse" data-target="#demo" style="background-color:white; color: black;">Filters</button>
+        <div id="demo" class="collapse">
+          <div class="grid-container">
+            <form id="myForm" autocomplete="off"> 
+              <div class="form-group">
+                <input type="text" class="form-control" id="search" placeholder="search" required>
+              </div>
+              <div class="form-group">
+              <button class="btn  btn-block">search</button>
+            </div>
+           <!-- <div class="mb-3">
+              <input type="text" class="form-control"  placeholder="Search" id="search">
+              <button class="btn btn-success" >search</button>
+            </div>        -->   
+          </form>
+            
+          </div>
         </div>
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#teams">Teams</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="menu-btn">
-            <i class="fa fa-bars">
-                <img src="assets/icons/menuwite.svg" alt=""class="i-wite">
-            <!--    <img src="assets/icons/menu1.svg" alt="">
-            <fa-icon [icon]="filmIcon"></fa-icon>-->
-            </i>
-
-        </div>
+      </div>
+    
     </div>
-</nav>
+  </nav>
+  

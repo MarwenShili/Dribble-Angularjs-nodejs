@@ -1,7 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import * as $ from 'jquery';
-//import { faFilm } from '@fortawesome/free-solid-svg-icons';
-
 
 
 @Component({
@@ -10,30 +10,35 @@ import * as $ from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  //filmIcon = faFilm;
+  public searchkeyword =""
+  public url =`https://api.unsplash.com/search/photos?page=1&query=office>; rel="first"`
+  faBars=faBars
 
-  constructor() {
-    
+  constructor() { }
 
-   }
+  
   ngOnInit(): void {
-    $(document).ready(() =>{
-      $(window).scroll(function(){
-        if(this.scrollY > 20){
-          $('.navbar').addClass("sticky");
-        }else{
-          $('.navbar').removeClass("sticky");
-    
-        }
-      });
-      //toggle menu/navbar script 
-      $('.menu-btn').click(function(){
-          $('.navbar .menu').toggleClass("active"); 
-          $('.menu-btn i').toggleClass("active"); 
+    $('.menu-btn').click(function(){
+      $('.navbar .menu').toggleClass("active"); 
+      $('.menu-btn i').toggleClass("active"); 
 
-        })
     });
+
   }
-
+ 
+  
 }
+$("#myForm").submit(function(event){
+  event.preventDefault()
 
+  var search = $("#search").val()
+  var Url = "https://api.unsplash.com/search/photos?query="+search+"&client_id=CKNfNyHWncQMxlilt0R0xvNNwgmQ5js3mVdBzHgNdrM"
+
+  $.ajax({
+    method: 'GET', 
+    url:Url,
+    success:function(data){
+      console.log(data)
+    }
+  })
+})

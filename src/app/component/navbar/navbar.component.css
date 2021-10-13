@@ -1,128 +1,85 @@
- /*navbar styling*/
- .max-width{
-     max-width: 1300px;
-     padding: 0 80px;
-     margin: auto;
- }
- a:link 
-{ 
- text-decoration:none; 
-} 
- .navbar {
-     top: 0px;
-     z-index: 999;
-     position :fixed;
-     padding: 23px 0;
-     width: 99%;
-     height: 47px;
-     background-color: none;
-     font-family: 'Ubuntu', sans-serif;
-
-    }
- .navbar.sticky{
-     padding: 15px 0;
-     background:crimson;
-     margin-top: 0px;
- }
- .navbar.sticky .logo a span {
-     color: #222;
-
- }
- .navbar .max-width{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
- }
- .navbar .logo a{
-     font-size: 35px;
-     color: #fff;
-     font-weight: 600;
- }
- .navbar .logo a span{
-     color: crimson;
-     transition: color 0.3s ease;
-
-
- }
- .navbar .menu li{
-     list-style: none;
-     display: inline-block;
- }
-
- 
- .navbar .menu li a{
-     color: #fff;
-     font-size: 15.5px;
-     font-weight: 550;
-     margin-left: 25px;
-     transition: color 0.3s ease;
- }
- .navbar .menu li a:hover{
- color: crimson;
+.navbar{
+    background-color: none !important;
+    flex-wrap: wrap;
 }
-.navbar .menu li a:active {
-    color: crimson;
+ .navbar-collapse{
+    margin-left: 25%;
+    position:relative;
 }
-
-.navbar.sticky .menu li a:hover {
-    color: #000;
+.nav-item{
+  text-align: center !important;
+  justify-content: center;
+  margin-left: 2%;
 }
-.menu-btn{
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
+.nav-item a{
+  font-size: 14px;
 }
-@media(max-width:947px){
-    .max-width{
-padding:0 50px;
-    }
-    .menu-btn{
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn img{
-        width: 30px;
-    }
-    .menu-btn i.active:before{
-        content: \f00d;
-    }
-    .navbar .menu{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -150%;
-        top: -20px;
-        background: #111;
-        text-align:center;
-        padding-top: 50px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active{
-    left: 0;
-    }
-    .navbar .menu li{
-        display: block;
-    }
-    .navbar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }   
-
-
-    
+.collapse ul li a {
+  color: #777;
+}
+.collapse ul li a:hover {
+  color: black;
+}
+.dropdown-toggle{
+    background-color: white !important;
+    color: #777;
+    border: none;
+    position: relative;
+}
+.dropdown{
+  position: relative;
 
 }
+.container{
+  margin-left: 30%;
+  margin-top: -30px;
+  position: relative;
+}
+.btn{
+  border-radius: 5px;
+  border: solid 1px #999;
+  float: right;
+}
+.dropdown .btn{
+  float: none;
+}
+.btn{
+  background-color: #Ea4c89;
+  color: white;
+}
+.container #demo{
+  width: 100%;
+  float: right;
+  margin-top: 10px;
+}
 
-@media(max-width:690px){
-    .max-width{
-        padding: 0 10px;
-        margin-left: -35px;
-    }
-        }
-        @media(max-width:991px){
-            .max-width{
-                padding:0 50px;
-                    }
-        }
+
+/*filter content styling*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: none;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 0px;
+  text-align: center;
+  width: 100px;
+}
+
+/*respensive*/
+@media(max-width:1200px){
+  .dropdown .btn{
+  float: left;
+  }
+}
+
+
+
+
+
+
+

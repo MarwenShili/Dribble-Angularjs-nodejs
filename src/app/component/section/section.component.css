@@ -1,0 +1,49 @@
+
+section {
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgb(248, 248, 248);
+    margin-top: -20px;
+ }
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    padding: 10px;
+  }
+  article img{
+      margin-left: 40%;
+  }
+nav{
+    margin: 130px 30px 140px 30px;
+    margin-left: 10%;
+}
+  .text1{
+    font-size: 42px;
+    font-weight: 800;
+    color: black;
+  }
+  .text2{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+  }
+  nav button{
+      color: white;
+      font-size: 18px;
+  }
+  @media (max-width: 900px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+    article img{
+      margin-left: 0px;}
+  }
+  @media (max-width: 500px) {
+    article img{
+      text-align: left;
+      margin-left: 0px;
+      margin-top: -100px;
+    }
+  }

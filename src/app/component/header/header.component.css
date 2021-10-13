@@ -1,0 +1,74 @@
+
+.navbar-brand{
+    font-size: 16px;
+    font-weight: 700;
+}
+.navbar-nav .nav-item a{
+    font-size: 14px;
+    font-weight: 560;
+    margin: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*right styling*/
+.right{
+    float: right;
+    margin: 10px;
+}
+.right button{
+    color: white;
+    font-size: 14px;
+}
+.right .fa-icon{
+    font-size: 16px;
+   color:#9e9ea7;
+}
+
+#signup:hover{
+    background-color:#Ea4c40 ;
+}
+
+/*drop styling*/
+.dropbtn {
+    background-color:none;
+    color:#9e9ea7;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
