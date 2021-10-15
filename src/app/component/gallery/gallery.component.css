@@ -1,7 +1,9 @@
+/*-------------------grid photo styling-----------------*/
 .lazy-loading{
     width: 150%;
     height: 80%;
     border-radius: 10%;
+    
 }
 img:hover{
     transform: scale(1.05);
@@ -20,8 +22,129 @@ img:hover{
 .left{
     margin-top: 25px;
     float:left;
+    font-size: 15px;
 }
 .right{
     margin-top: 30px;
     float: right;
+    font-size: 15px;
+
 }
+
+
+/*----------------search collaps styling--------------*/
+
+.container{
+    margin-left: 30%;
+    margin-top: -30px;
+  }
+  .btn{
+    border-radius: 5px;
+    border: solid 1px #999;
+    float: right;
+    font-size: 15px;
+
+  }
+  .dropdown .btn{
+    float: none;
+    font-size: 15px;
+
+  }
+  .uk-text-right button{
+    border-radius: 10%;
+  }
+  /*
+  .form-group .btn{
+    background-color: #Ea4c89;
+    color: white;
+    width: 50%;
+    float: center;
+
+  }
+  .container .btn{
+    margin-top: 0%;
+    margin-bottom: 3%;
+    position: relative;
+  }
+  
+  .form-group input{
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 15px;
+    margin-left: 530px;
+    position: relative;
+  }
+  .form-group .btn{
+    float: left;
+    margin-top: 0%;
+    font-size: 15px;
+
+  }
+  .container #demo{
+    width: 100%;
+    float: right;
+    margin-top: 10px;
+    font-size: 15px;
+  }*/
+  .form-group input{
+    width: 20%;
+    float: right;
+    margin-top: -40px;
+    margin-right: 8px;
+    margin: -45px 10px 30px 40px;
+    position: relative;
+  }
+  
+  
+  @media(max-width:1700px){
+    .container {
+      margin: 0%;
+    }
+    .dropdown{
+float: center;    }
+.form-group input{
+  margin-top: 10%;
+}
+  }
+  @media(max-width:1000px){
+    .container1{
+      width: 80%;
+      text-align: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
+    .container{
+      margin-left: -150px;
+    }
+    .form-group input{
+      margin-top: 10%;
+      width: 80%;
+     justify-content: center;
+    }
+  }
+
+
+  @media(max-width:1700px){
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,16 +1,60 @@
+<!---------------------------search -----------------------
+<div class="container">
+  <button type="button" class="btn" data-toggle="collapse" data-target="#demo" style="background-color:white; color: black;"><fa-icon [icon]="faFilter"></fa-icon> Filters</button>
+  <div id="demo" class="collapse">
+    <div class="grid-container">-->
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+      </div>
+   
+
+
+<!--------------------grid photos from unsplash api -------------------->
+
 <div class="container1" *ngIf="Items">
     <div
       class="row justify-content-around align-items-center">
       <div
-        class="col-lg-2 col-md-6 col-sm-12 border m-3"
-        style="height:40vh"
-        *ngFor="let item of Items"
-      >
-        <img alt="" [lazyLoad]="item.urls.regular" class="lazy-loading" />
-        <span class="left"><img alt="" [lazyLoad]="item.user.profile_image.small" class="lazy-loading-img-profile"/>
-        {{item.user.first_name}}</span> 
-        <span class="right"><fa-icon [icon]="faHeart"></fa-icon>&nbsp; {{item.likes}}
-          <fa-icon [icon]="faEye"></fa-icon>&nbsp;&nbsp;{{item.height}}</span>
+        class="col-lg-2 col-md-6 col-sm-12 m-3" style="height:40vh"
+        *ngFor="let item of Items | filter:term">
+
+          <!--image from unsplash-->
+        <a  href="#modal-example" uk-toggle><img  alt="" [lazyLoad]="item.urls.regular" class="lazy-loading" /></a>
+                  <!--modal uikit popup-->
+        <div id="modal-example" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body">
+              <h2 class="uk-modal-title"></h2>
+             <img src="{{item.urls.regular}}" alt=""> 
+              <p class="uk-text-right">
+                <br><br>
+                  <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                  <button (click)="onSave()" class="uk-button uk-button-primary" type="button"><fa-icon class="heart"   [icon]="faHeart" style="color: crimson;"  ></fa-icon>{{item.likes + inc}}</button>
+              </p>
+          </div>
+      </div>
+
+
+          <!--profile image and username-->
+        <span class="left">
+          <img alt="" [lazyLoad]="item.user.profile_image.small" class="lazy-loading-img-profile"/>{{item.user.first_name}}
+        </span> 
+
+          <!--like and nmber of vu-->
+        <span  class="right">
+          <div *ngIf="inc==0">
+          <fa-icon  (click)="onSave()" [icon]="faHeart" ></fa-icon>&nbsp; {{item.likes}}
+          <fa-icon [icon]="faEye"></fa-icon>&nbsp;&nbsp;{{item.height}}
+        </div>
+
+         <div *ngIf="inc!=0">
+          <fa-icon   (click)="onSave()" [icon]="faHeart"  ></fa-icon>{{item.likes + inc}}
+          <fa-icon [icon]="faEye"></fa-icon>&nbsp;&nbsp;{{item.height}}
+
+        </div>
+          
+        
+      </span>
       </div>
     </div>
   </div>
+

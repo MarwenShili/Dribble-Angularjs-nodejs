@@ -1,0 +1,19 @@
+<form #f="ngForm" (ngSubmit)="addimage(f)">
+    
+ 
+    <div >
+        <input type="text" class="form-control"  placeholder="link image" name="image" 
+        #image="ngModel" ngModel>
+      </div>
+      <div >
+        <input type="text" class="form-control" 
+        placeholder="name" name="name" #name="ngModel" ngModel>
+        <div >
+            <input type="number" class="form-control" 
+            placeholder="number likes" name="nblike" #nblike="ngModel" ngModel>
+          </div>
+    </div>
+    <div class="alert alert-success" *ngIf="successmessage">{{successmessage}}</div>
+    <button class="btn btn-success"  (ngSubmit)="addimage(f)">Save</button>
+
+  </form>

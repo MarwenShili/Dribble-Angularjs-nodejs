@@ -10,8 +10,7 @@ import * as $ from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public searchkeyword =""
-  public url =`https://api.unsplash.com/search/photos?page=1&query=office>; rel="first"`
+ 
   faBars=faBars
 
   constructor() { }
@@ -28,17 +27,3 @@ export class NavbarComponent implements OnInit {
  
   
 }
-$("#myForm").submit(function(event){
-  event.preventDefault()
-
-  var search = $("#search").val()
-  var Url = "https://api.unsplash.com/search/photos?query="+search+"&client_id=CKNfNyHWncQMxlilt0R0xvNNwgmQ5js3mVdBzHgNdrM"
-
-  $.ajax({
-    method: 'GET', 
-    url:Url,
-    success:function(data){
-      console.log(data)
-    }
-  })
-})
